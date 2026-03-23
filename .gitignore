@@ -1,0 +1,10 @@
+# Fichiers à ignorer par Git
+venv/
+__pycache__/
+*.pyc
+instance/
+*.db
+.env
+.pytest_cache/
+app/uploads/
+*.log

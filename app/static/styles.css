@@ -1,0 +1,58 @@
+:root {
+  --pharma-green: #198754;
+}
+.btn-success {
+  background-color: var(--pharma-green);
+  border-color: var(--pharma-green);
+}
+.bg-success {
+  background-color: var(--pharma-green) !important;
+}
+.navbar-brand {
+  font-weight: 600;
+}
+.card-header.bg-success {
+  border-bottom: 0;
+}
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.hero-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay h2 {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+.hero-overlay p {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+.card {
+  border: none;
+  border-radius: 12px;
+}
+.card-header {
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+.btn {
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+}

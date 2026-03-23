@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card shadow-sm">
+      <div class="card-header bg-success text-white">Téléverser l’image de bannière</div>
+      <div class="card-body">
+        <form action="{{ url_for('main.hero') }}" method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label class="form-label">Image (.png, .jpg, .jpeg)</label>
+            <input type="file" name="file" class="form-control" accept=".png,.jpg,.jpeg" required>
+          </div>
+          <div class="form-text">Conseil: une image horizontale pour un meilleur rendu (ex: 1200×400).</div>
+          <button type="submit" class="btn btn-success">Enregistrer</button>
+          <a href="{{ url_for('main.index') }}" class="btn btn-outline-success">Retour</a>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

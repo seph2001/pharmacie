@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pharmacie en ligne</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body class="bg-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+      <div class="container">
+        <a class="navbar-brand" href="{{ url_for('main.index') }}">Pharmacie</a>
+        <div class="ms-auto">
+          <a class="btn btn-outline-light btn-sm" href="{{ url_for('main.logo') }}">Changer le logo</a>
+        </div>
+      </div>
+    </nav>
+    <header class="py-4 bg-light border-bottom">
+      <div class="container d-flex align-items-center gap-3">
+        <img src="{{ url_for('static', filename='pharma.png') }}"
+             alt="Pharmacie"
+             width="56" height="56"
+             onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Green_cross.svg/240px-Green_cross.svg.png';">
+        <div>
+          <h1 class="h4 text-success m-0">Votre santé, notre priorité</h1>
+          <p class="m-0 text-muted">Envoyez votre ordonnance, recevez une notification.</p>
+        </div>
+      </div>
+    </header>
+    <section class="hero-container">
+      <img src="{{ url_for('static', filename='2.jpg') }}"
+           alt="Pharmacie Pharmacien"
+           class="hero-banner"
+           onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1587854692152-cbe660dbbb88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';">
+      <div class="hero-overlay">
+        <div class="container text-center text-white py-5">
+          <h2 class="display-4 fw-bold">Gestion Pharmacie en ligne</h2>
+          <p class="lead">Votre santé, notre priorité - Envoyez votre ordonnance en un clic</p>
+        </div>
+      </div>
+    </section>
+    <main class="container py-4">
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert alert-warning">{{ messages[0] }}</div>
+        {% endif %}
+      {% endwith %}
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="py-4 bg-success text-white">
+      <div class="container">
+        <small>&copy; {{ 2026 }} Pharmacie en ligne</small>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
