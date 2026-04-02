@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 env:
-  DOCKERHUB_IMAGE: seph001/pharmacie-app
+  DOCKERHUB_IMAGE: seph001/pharmacie
 
 jobs:
   build-and-push:
