@@ -108,8 +108,8 @@ Un workflow GitHub Actions est fourni dans `.github/workflows/docker-image.yml` 
 
 Secrets GitHub a configurer :
 
-- `DOCKERHUB_USERNAME`
-- `DOCKERHUB_TOKEN`
+- `DOCKERHUB_USERNAME` ok
+- `DOCKERHUB_TOKEN` ok
 
 Image attendue :
 
